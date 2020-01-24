@@ -18,6 +18,16 @@ playerOne.addEventListener("click", function() {
     }
 });
 
+ playerOne.addEventListener("click", function() {
+     if(!gameOver){
+        playerOnescore++;
+        if(playerOnescore === winningScore){
+            gameOver = true;
+        }
+        playerOnedisplay.textContent = playerOnescore;  
+     }
+ });
+
 playerTwo.addEventListener("click", function(){
     if(!gameOver){
         playerTwoscore++;
@@ -29,3 +39,16 @@ playerTwo.addEventListener("click", function(){
     }
     
 });
+
+ playerTwo.addEventListener("click", function(){
+     if(!gameOver){
+         playerTwoscore++;
+         if(playerTwoscore === winningScore){
+             gameOver = true;
+
+         }
+         playerTwodisplay.textContent = playerTwoscore;
+
+     }
+     
+ });
