@@ -43,12 +43,11 @@ function reset(){
     playerTwodisplay.textContent = 0;
     playerOnedisplay.classList.remove("winner");        playerTwodisplay.classList.remove("winner");
     gameOver = false;
-
 }
 
 //updates number of rounds according to the value entered in the input
 numInput.addEventListener("change", function(){
-    winningScoreDisplay.textContent = numInput.value;
-    winningScore = Number(numInput.value);
+    winningScoreDisplay.textContent = this.value;
+    winningScore = Number(this.value);
     reset (); 
 });
